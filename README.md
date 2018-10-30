@@ -2,7 +2,11 @@
 
 Vue-mysql-express-axios
 一个Vue+mysql+Express+Axios的Demo
-Vue前端  node.js+express作为后台  axios做数据交互  包含跨域
+
+Vue前端  
+node.js+express作为后台  
+axios做数据交互  
+包含跨域
 
 安装mysql ，导入数据库（文件中并没有）
 修改db.js和sql_code.js相关数据库的信息
@@ -17,4 +21,4 @@ npm install
 npm run start
 
 
-待续。。。。
+
