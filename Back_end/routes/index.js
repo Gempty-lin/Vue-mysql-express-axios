@@ -13,7 +13,8 @@ connection.connect();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-
+//创建前端接口，并发送相关内容
+//get的发送速度比post快，但post比get安全
 router.get('/cn_menu', function(req, res, next) {
   connection.query(sql_code.menu,function(err,result){
     if(err){
