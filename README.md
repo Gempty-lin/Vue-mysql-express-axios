@@ -1,21 +1,20 @@
+每天进步一点，做一个小记录
 
+Vue-mysql-express-axios
+一个Vue+mysql+Express+Axios的Demo
+Vue前端  node.js+express作为后台  axios做数据交互  包含跨域
 
-> A Vue.js project
+安装mysql ，导入数据库（文件中并没有）
+修改db.js和sql_code.js相关数据库的信息
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
+初始文件夹中运行
+npm install 
 npm run dev
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+打开新的cmd进入back_end中
+npm install 
+npm run start
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+待续。。。。
