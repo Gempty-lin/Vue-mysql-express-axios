@@ -1,12 +1,21 @@
-# Vue-mysql-express-axios
-Vue前端，Express后台，Axios做数据交互，含跨域的DEMO
+# e_2
 
-cd 到项目文件夹 
-npm install   //初始文件夹下运行
-npm run dev   //初始文件夹下运行
+> A Vue.js project
 
+## Build Setup
 
-打开cmd cd到项目文件夹中的back_end
+``` bash
+# install dependencies
+npm install
 
-npm install   //在back_end中运行
-npm start     //在back_end中运行
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

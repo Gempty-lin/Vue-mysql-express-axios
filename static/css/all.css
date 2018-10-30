@@ -1,0 +1,47 @@
+/* 中间放大
+    transform: scale;
+文本过多省略号
+height: 19px;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;
+斜切效果
+transform: perspective(1000px) rotateY(35deg);
+transform-origin: 5% 50%; 
+倒影
+-webkit-box-reflect:below 2px -webkit-linear-gradient(transparent,transparent 80%,rgba(0,0,0,0.5));
+水平翻转
+transform: rotateY(180deg);
+垂直翻转
+transform: rotateX(180deg);
+亮度
+-webkit-filter:brightness(.5);
+灰度
+filter: grayscale(100%);
+滚动条
+.address-ul::-webkit-scrollbar-thumb  {border-radius: 0px;  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);   background-color: #555;}
+.address-ul::-webkit-scrollbar{width: 10px;  height: 16px;  background-color: #261d18;} 	  
+定义滚动条轨道 内阴影+圆角
+.address-ul::-webkit-scrollbar-track  {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  border-radius: 0px;  background-color: #F5F5F5;}  */
+/* 
+字体
+@font-face {
+
+    font-family: Playfair Display SC;
+    src:url('../fonts/PlayfairDisplay-Black.ttf'),  
+    url('../fonts/PlayfairDisplay-BlackItalic.ttf'),
+    url('../fonts/PlayfairDisplay-Bold.ttf'),
+    url('../fonts/PlayfairDisplay-Italic.ttf'),
+    url('../fonts/PlayfairDisplay-Regular.ttf'),
+    url('../fonts/PlayfairDisplay-BoldItalic.ttf'); 
+}
+ */
+
+
+/* @font-face {font-family: NewsFont;src:""} */
+
+ul {padding-left: 0px;margin: 0px}
+li {list-style: none}
+body {font-family: "微软雅黑";padding: 0px;margin: 0px}
+a {text-decoration: none;outline: none;}
+p {margin-bottom: 0px}
+input,ul,li,div,a,textarea{outline: none;}
+*{box-sizing: border-box;}
+/*# sourceMappingURL=all.css.map */
