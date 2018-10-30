@@ -12,12 +12,13 @@ var cors = require('cors');
 //...............
 var app = express();
 
-
+//允许8080端口的访问，只允许执行GET和POST两个请求方式，需要带Conten-Type，Authorization这样的请求头访问，需要npm安装cors
 app.use(cors({
   origin:['http://localhost:8080'],
   methods:['GET','POST'],
   alloweHeaders:['Conten-Type', 'Authorization']
 }));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
