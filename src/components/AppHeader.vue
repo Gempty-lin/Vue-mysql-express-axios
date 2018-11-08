@@ -1,31 +1,59 @@
 <template>
     <div id="app">
         <div class="header_menu">
-            <ul class="menu">
-                <li v-for="( menu,index) in menu.all"> 
-                    <router-link :to="{name:''+ menu[1].url +'',params:{first:''+menu[2].ids+'',second:'22'}, query:{LV1:''+menu[2].ids+'',LV2:'123'} }">{{ menu[0].name }}</router-link> 
-                </li>
-            </ul>
+            <div class="row_0">
+                <div class="search">
+                    <form action="">
+                        <input id="head_search" type="text" placeholder="Search..." >
+                        <span><img src="" alt=""></span>
+                        <input id="head_sub" type="submit" value=" ">
+                    </form>
+                </div>
+                <menu_com></menu_com>
+            </div>
         </div>
     </div>
-    <!-- ,query:{ids:''+menu[2].ids+''} ,params:{one:''+menu[2].ids+''}-->
 </template>
 
 <style lang="scss" scoped>
     #app{
+        width: 100%;max-width: 100%;;
         .header_menu{
-            height: 110px;display: flex;justify-content: center;align-items: center;;
-            ul{
-                display: flex;justify-content:space-around;width: 100%;flex: 0 0 50%;
-                li{
-                    a{color: #107c4a}
+            height: 80px;display: flex;justify-content: center;align-items: center;width: 100%;max-width: 100%;margin: 0 auto;background: #009688;;
+            .row_0{
+                width: 1440px;max-width: 100%;margin: 0 auto;display: flex;flex-wrap: wrap;height: 100%;align-items: center;;
+            }
+            .logo{
+                margin-right: 7.6%;
+                img{
+                    width: 135px;max-width: 100%;;
+
                 }
             }
+            .search{
+                position: relative;margin-right: 3%;
+                form{
+                    position: relative;display: flex;align-items: center;
+                    #head_search{
+                        width: 225px;height: 30px;background: #fff;border: none;padding-left: 30px;;
+                    }
+                    #head_sub{
+                        width: 25px;height: 19px;background: transparent;border: none;position: absolute;;right: 10px;;
+                    }
+                }
+            }
+            
         }
     }
 </style>
 <script>
-import axios from 'axios'
+import menu_com from './menu_com.vue'
+export default{
+    components:{
+        menu_com
+    }
+}
+/* import axios from 'axios'
 var menu = {all:[]}
 data_name();
 export default {
@@ -48,12 +76,11 @@ function data_name(){
     .then(function (res) {
       
       menu.all = res.data;
-      console.log(menu.all)
     })
     .catch(function (error) {
       console.log(error);
   });
-}
+} */
 
 </script>
 

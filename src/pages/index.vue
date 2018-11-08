@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        Welcome index
+       <p>{{msg}}</p>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -19,7 +19,8 @@ export default {
     }
   },
   mounted () {
-    
+    let pp = document.getElementsByTagName('p')[0];
+    pp.innerHTML = 'Welcome Index'
   }
 }
 
