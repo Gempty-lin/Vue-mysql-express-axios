@@ -7,18 +7,23 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //.............
-var cors = require('cors');
+
+// 引入json解析中间件
+var bodyParser = require('body-parser');
 
 //...............
 var app = express();
-
-//允许8080端口的访问，只允许执行GET和POST两个请求方式，需要带Conten-Type，Authorization这样的请求头访问，需要npm安装cors 
+//跨域设置
+var cors = require('cors');
 app.use(cors({
-  origin:['http://localhost:8080'],
-  methods:['GET','POST'],
-  alloweHeaders:['Conten-Type', 'Authorization']
+  origin:['http://localhost:8080'],//只允许8080端口访问
+  methods:['GET','POST'],//只允许这两个请求
+  alloweHeaders:['Conten-Type', 'Authorization']//请求必须带这头部
 }));
 
+// 添加json解析
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -49,4 +54,16 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+
+
+
+//自动刷新
+var debug = require('debug')('my-application'); // debug模块
+app.set('port', process.env.PORT || 3000); // 设定监听端口
+ 
+//启动监听
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+
+/* module.exports = app; */
