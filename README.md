@@ -5,6 +5,7 @@ Vue-mysql-express-axios
 
 Vue前端  
 node.js+express作为后台  
+mysql做数据库
 axios做数据交互  
 
 包含跨域
